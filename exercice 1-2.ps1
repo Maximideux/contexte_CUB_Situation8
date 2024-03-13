@@ -6,3 +6,6 @@
 #                               #
 #===============================#
 
+<# Exercice 1 - 2 | Code servant à afficher les processus de WindowsServer #>
+
+Get-Process -Name svchost | Format-table "Id","ProcessName"
