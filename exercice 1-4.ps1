@@ -1,10 +1,10 @@
-﻿#===============================#
-#                           	#
-# NOM : scriptProsessusWindows  #
-# AUTEUR : TERPREAU Maximilien  #
-# DATE : 13 mars 2024 à 11h15   #
-#                           	#
-#===============================#
+﻿#========================================#
+#                           	         #
+# NOM : scriptProsessusWindows+Filtrage  #
+# AUTEUR : TERPREAU Maximilien           #
+# DATE : 13 mars 2024 à 11h15            #
+#                           	         #
+#========================================#
 
 <# Script permettat d'afficher le processus à la demande de l'utilisateur #>
 
@@ -12,7 +12,7 @@
 
 Do {
     If ($réponse -eq 'Y') {
-        [string]$processus = Read-Host 'Lequel?'
+        [string]$processus = Read-Host 'Lequel ?'
         } 
     $tableau = Get-Process | Where-Object {$_.ProcessName -like "$processus"}
     $tableau | Format-Table Id, Name, Description
