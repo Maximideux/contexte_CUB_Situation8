@@ -42,8 +42,8 @@ Do {
         [string]$processus = Read-Host 'Lequel ?'
         } 
     $tableau = Get-Process | Where-Object {$_.ProcessName -like "$processus"}
-    $tableau | Format-Table Id, Name, Description | Out-File "C:\sauvegardeSituation8_CUB\sauvegarde.txt" -Encoding utf8
-    $tableau | Export-Csv "C:\sauvegardeSituation8_CUB\sauvegarde.csv" -Delimiter ","  
+    $tableau | Format-Table Id, Name, Description | Out-File "C:\sauvegardeSituation8_CUB\sauvegarde.txt" -Encoding utf8 -Append
+    $tableau | Export-Csv "C:\sauvegardeSituation8_CUB\sauvegarde.csv" -Delimiter ","  -Append
     [string]$réponse = Read-Host 'Voulez-vous voir un autre processus? (Y ou n)'
 
 } While ($réponse -eq 'Y')
