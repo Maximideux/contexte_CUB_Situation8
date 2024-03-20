@@ -6,7 +6,7 @@
 #                           	         #
 #========================================#
 
-<# Script permettant d'afficher le processus à la demande de l'utilisateur #>
+<# Script permettat d'afficher le processus à la demande de l'utilisateur #>
 
 [string]$processus = Read-Host 'Quel processus désirez-vous voir?'
 
